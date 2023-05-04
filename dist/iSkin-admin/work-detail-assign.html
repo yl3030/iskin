@@ -35,7 +35,7 @@
             </div>
           </li>
           <li>
-            <a class="side-bar__btn is-active" href="office-list.html">診間管理</a>
+            <a class="side-bar__btn" href="office-list.html">診間管理</a>
           </li>
           <li>
             <a class="side-bar__btn side-bar__btn--sub" href="#">器材管理</a>
@@ -63,7 +63,7 @@
             <a class="side-bar__btn" href="overall-report.html">總體報表</a>
           </li>
           <li>
-            <a class="side-bar__btn side-bar__btn--sub" href="">明細查詢</a>
+            <a class="side-bar__btn side-bar__btn--sub is-active" href="">明細查詢</a>
             <div class="side-bar__sub-nav">
               <a href="work-detail-reserve.html">預約紀錄</a>
               <a href="work-detail-assign.html">指派紀錄</a>
@@ -77,8 +77,7 @@
     </div>
     <div class="admin-main">
       <div class="admin-header">
-        <a class="admin-header__btn-back" href="office-list.html">返回</a>
-        <h2>診間與休息區管理</h2>
+        <h2>指派紀錄</h2>
         <div class="admin-header__control">
           <div class="admin-header__account">
             <img class="admin-header__account-avatar" class="" src="https://picsum.photos/id/1005/120/120" alt="">
@@ -87,54 +86,71 @@
           </div>
         </div>
       </div>
-      <div class="office-detail">
-        <div class="office-detail__basic-info">
-          <div class="office-detail__basic-info-inner">
-            <div class="office-detail__col">
-              <h3>基本資料</h3>
-              <div class="office-detail__form">
-                <div class="office-detail__row">
-                  <label for="name">名稱</label>
-                  <input type="text" id="name" value="">
-                </div>
-                <div class="office-detail__row">
-                  <label for="sn">編號</label>
-                  <input type="text" id="sn">
-                </div>
-                <div class="office-detail__row">
-                  <label for="place">位置</label>
-                  <input type="tel" id="place">
-                </div>
-                <div class="office-detail__row">
-                  <label for="status">狀態</label>
-                  <div class="office-detail__select-wrap">
-                    <select name="type" id="status">
-                      <option value="0">狀態</option>
-                      <option value="1">狀態1</option>
-                      <option value="2">狀態2</option>
-                    </select>
-                  </div>
-                </div>
+      <div class="work-detail">
+        <div class="work-detail__date-picker">
+          <input type="date" value="2021-01-01">～<input type="date" value="2021-01-31">
+        </div>
+        <div class="work-detail__filter">
+            <div class="work-detail__select-wrap result">
+              <select name="type" id="type">
+                <option value="0">指派人</option>
+                <option value="1">預約</option>
+                <option value="2">取消</option>
+                <option value="3">改期</option>
+                <option value="4">硬約</option>
+              </select>
+            </div>
+            <div class="work-detail__select-wrap result">
+              <select name="type" id="type">
+                <option value="0">被指派人</option>
+                <option value="1">預約</option>
+                <option value="2">取消</option>
+                <option value="3">改期</option>
+                <option value="4">硬約</option>
+              </select>
+            </div>
+            <input type="text" value="客人">
+            <button>搜尋</button>
+        </div>
+        <p class="work-detail__total">案件總數：758</p>
+        <div class="work-detail__wrap">
+          <h3>工作明細</h3>
+          <div class="work-detail__list">
+            <div class="work-detail__work-item">
+              <div class="work-detail__row">
+                <span class="work-detail__col1_5">指派人：ＳＳＳ</span>
+                <span class="work-detail__col1_5">被指派人：ＧＧＧ</span>
+                <span class="work-detail__col1_5">地點：4-3診間</span>
+                <span class="work-detail__col1_5">日期：2021-10-01</span>
+                <span class="work-detail__col1_5">時間：19:08 ~ 19:13</span>
+              </div>
+              <div class="work-detail__row">
+                <span class="work-detail__col1_5">客人：ＲＲＲ   65/1/1</span>
+                <span class="work-detail__col1_5">積分：85</span>
+                <span class="work-detail__col3_5">任務：[鼻科回診-200/預約送客]宋蕎安 (4-3診間)[鼻科回診-200/預約送客]宋蕎安 (4-3診間)[鼻科回診-200/預約送客]宋蕎安 (4-3診間)</span>
               </div>
             </div>
-            <div class="office-detail__col">
-              <h3></h3>
-              <div class="office-detail__row">
-                <label for="picture">照片</label>
-                <div class="office-detail__avatar">
-                  <div class="office-detail__picture-wrap">
-                    <img src="" alt="">
-                  </div>
-                  <input type="file">
-                </div>
+            <div class="work-detail__work-item">
+              <div class="work-detail__row">
+                <span class="work-detail__col1_5">指派人：ＳＳＳ</span>
+                <span class="work-detail__col1_5">被指派人：ＧＧＧ</span>
+                <span class="work-detail__col1_5">地點：4-3診間</span>
+                <span class="work-detail__col1_5">日期：2021-10-01</span>
+                <span class="work-detail__col1_5">時間：19:08 ~ 19:13</span>
               </div>
-              <div class="office-detail__row">
-                <label for="memo">說明</label>
-                <textarea name="memo" id="memo" cols="30" rows="10"></textarea>
+              <div class="work-detail__row">
+                <span class="work-detail__col1_5">客人：ＲＲＲ   65/1/1</span>
+                <span class="work-detail__col1_5">積分：85</span>
+                <span class="work-detail__col3_5">任務：[鼻科回診-200/預約送客]宋蕎安 (4-3診間)</span>
               </div>
             </div>
           </div>
-          <button class="admin-btn-lg">儲存</button>
+          <div class="admin-pagination">
+            <button class="admin-pagination__btn-prev is-disable">上一頁</button>
+            <span class="admin-pagination__current">1</span>
+            <span class="admin-pagination__page">/ 22頁</span>
+            <button class="admin-pagination__btn-next">下一頁</button>
+          </div>
         </div>
       </div>
     </div>
