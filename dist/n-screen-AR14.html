@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>iSkin尚行美健康聯合診所</title>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <div class="normal-screen full">
+    <!--預約-->
+    <div class="panel panel--reservation">
+      <!--請選擇成交項目-->
+      <div class="reservation-type is-active">
+        <div class="reservation-tab">
+          <button>未成交</button>
+          <button class="active">有成交</button>
+        </div>
+        <div class="reservation-type__header">
+          <h3>請選擇成交項目</h3>
+          <div class="site-search">
+            <input type="text">
+            <button>搜尋</button>
+          </div>
+        </div>
+        <div class="reservation-type__wrap deal">
+          <div class="reservation-type__group">
+            <h4>類別A</h4>
+            <ul class="reservation-type__list">
+              <li>項目名稱</li>
+              <li>項目名稱</li>
+              <li>項目名稱</li>
+              <li>項目名稱</li>
+              <li>項目名稱</li>
+              <li>項目名稱</li>
+              <li>項目名稱</li>
+              <li>項目名稱</li>
+              <li>項目名稱</li>
+              <li>項目名稱</li>
+            </ul>
+          </div>
+          <div class="reservation-type__group">
+            <h4>類別B</h4>
+            <ul class="reservation-type__list">
+              <li>項目名稱</li>
+              <li>項目名稱</li>
+              <li>項目名稱</li>
+              <li>項目名稱</li>
+              <li>項目名稱</li>
+            </ul>
+          </div>
+          <div class="reservation-type__group">
+            <h4>類別C</h4>
+            <ul class="reservation-type__list">
+              <li>項目名稱</li>
+              <li>項目名稱</li>
+              <li>項目名稱</li>
+              <li>項目名稱</li>
+              <li>項目名稱</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+            <div class="reservation-type__header">
+                <h3>成交內容確認</h3>
+            </div>
+            <div class="reservation-type__dealContent">
+                <div class="reservation-type__dealContent__item">
+                    <span>項目項目項目A5</span>
+                    <div class="reservation-type__dealContent__input">
+                        <button><img src="./images/icon-minus.svg" alt=""></button>
+                        <input type="text">
+                        <button><img src="./images/icon-plus.svg" alt=""></button>
+                    </div>
+                </div>
+                <div class="reservation-type__dealContent__item">
+                    <span>項目項目項目A5</span>
+                    <div class="reservation-type__dealContent__input">
+                        <button><img src="./images/icon-minus.svg" alt=""></button>
+                        <input type="text">
+                        <button><img src="./images/icon-plus.svg" alt=""></button>
+                    </div>
+                </div>
+                <div class="reservation-type__dealContent__item">
+                    <span>項目項目項目A5</span>
+                    <div class="reservation-type__dealContent__input">
+                        <button><img src="./images/icon-minus.svg" alt=""></button>
+                        <input type="text">
+                        <button><img src="./images/icon-plus.svg" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="reservation-type__btn-confirm">確定</button>
+      </div>
+      <!--請選擇成交項目-->
+    </div>
+    <!--預約-->
+  </div>
+  <script src="js/all.js"></script>
+  <script>
+    $(function(){
+      var isPad = $('html').hasClass('ipad') || ''
+      
+      if(isPad) {
+        $('.normal-screen').addClass('is-pad')
+        $('.panel--upcoming,.panel--overdue').hide()
+      }
+
+      $('.panel__btn-toggle').on('click', function(){
+        $(this).toggleClass('is-active')
+        $(this).next().toggleClass('is-active')
+      })
+
+      $('.card-btn-menu').on('click', function(){
+        $(this).toggleClass('is-active')
+        $(this).next().toggleClass('is-active')
+      })
+
+      $('.site-search > button').on('click', function(e){
+        e.preventDefault()
+        if($(this).text() === '搜尋') {
+          if($(this).prev().val()) {
+            $(this).text('清除')
+          } else {
+            alert('請輸入搜尋文字!')
+          }
+        } else {
+          $(this).text('搜尋')
+          $(this).prev().val('')
+        }
+      })
+
+      $('.btn-reservation').on('click', function(){
+        $('.reservation-client').addClass('is-active')
+        $(this).addClass('is-hide')
+      })
+      
+      $('.reservation-client__btn-client').on('click', function(){
+        $('.create-client-data').addClass('is-active')
+      })
+
+      $('.create-client-data__btn-save').on('click', function(){
+        $('.create-client-data').removeClass('is-active')
+      })
+
+    });
+  </script>
+</body>
+</html>
