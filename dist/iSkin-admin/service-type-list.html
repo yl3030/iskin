@@ -16,37 +16,33 @@
       <div class="side-bar__nav">
         <ul>
           <li>
+            <a class="side-bar__btn" href="client-list.html">客戶管理</a>
+          </li>
+          <li>
             <a class="side-bar__btn side-bar__btn--sub" href="#">員工管理</a>
             <div class="side-bar__sub-nav">
               <a href="employee-list.html">員工管理</a>
-              <a href="vacation-management.html">休假管理</a>
+              <a href="">休假管理</a>
               <a href="employee-substitue.html">代班管理</a>
-              <a href="employee-extra.html">加診管理</a>
-            </div>
-          </li>
-          <li>
-            <a class="side-bar__btn side-bar__btn--sub is-active" href="#">服務管理</a>
-            <div class="side-bar__sub-nav">
-              <a href="service-type-list.html">類別管理</a>
-              <a href="service-course-list.html">療程管理</a>
-              <a href="service-group-add.html">群組管理</a>
-              <a href="service-flow-list.html">流程管理</a>
-              <a href="service-step.html">步驟總表</a>
-              <a href="service-special.html">醫療特例管理</a>
+              <a href="">加診管理</a>
             </div>
           </li>
           <li>
             <a class="side-bar__btn" href="office-list.html">診間管理</a>
           </li>
           <li>
-            <a class="side-bar__btn side-bar__btn--sub" href="#">器材管理</a>
+            <a class="side-bar__btn side-bar__btn--sub is-active" href="#">服務管理</a>
             <div class="side-bar__sub-nav">
-              <a href="equipment-type.html">類別管理</a>
-              <a href="equipment-equip.html">器材管理</a>
+              <a href="service-type-list.html">類別管理</a>
+              <a href="service-course-list.html">療程管理</a>
+              <a href="">群組管理</a>
+              <a href="">流程管理</a>
+              <a href="">步驟總表</a>
+              <a href="service-special.html">醫療特例管理</a>
             </div>
           </li>
           <li>
-            <a class="side-bar__btn" href="client-list.html">客戶管理</a>
+            <a class="side-bar__btn" href="vacation-management.html">休假管理</a>
           </li>
           <li>
             <a class="side-bar__btn" href="account-list.html">帳號管理</a>
@@ -57,7 +53,7 @@
               <a href="">診所時間</a>
               <a href="other-announce.html">佈告管理</a>
               <a href="other-message.html">簡訊管理</a>
-              <a href="backup-and-return.html">備份與回復</a>
+              <a href="">回復設定</a>
             </div>
           </li>
           <li>
@@ -67,7 +63,7 @@
             <a class="side-bar__btn side-bar__btn--sub" href="">明細查詢</a>
             <div class="side-bar__sub-nav">
               <a href="work-detail-reserve.html">預約紀錄</a>
-              <a href="work-detail-assign.html">指派紀錄</a>
+              <a href="">指派紀錄</a>
               <a href="work-detail.html">工作紀錄</a>
               <a href="">諮詢成交紀錄</a>
             </div>
@@ -78,7 +74,7 @@
     </div>
     <div class="admin-main">
       <div class="admin-header">
-        <h2>服務管理：群組</h2>
+        <h2>服務管理：類別</h2>
         <div class="admin-header__control">
           <div class="admin-header__account">
             <img class="admin-header__account-avatar" class="" src="https://picsum.photos/id/1005/120/120" alt="">
@@ -103,7 +99,7 @@
           <tbody>
             <tr>
               <td>C0001</td>
-              <td>1</td>
+              <td>類別1</td>
               <td>
                 <a class="admin-btn" href="service-type-edit.html">編輯</a>
                 <a class="admin-btn" href="#">刪除</a>
@@ -111,7 +107,7 @@
             </tr>
             <tr>
               <td>C0002</td>
-              <td>2</td>
+              <td>類別2</td>
               <td>
                 <a class="admin-btn" href="service-type-edit.html">編輯</a>
                 <a class="admin-btn" href="#">刪除</a>
@@ -119,7 +115,7 @@
             </tr>
             <tr>
               <td>C0003</td>
-              <td>3</td>
+              <td>類別3</td>
               <td>
                 <a class="admin-btn" href="service-type-edit.html">編輯</a>
                 <a class="admin-btn" href="#">刪除</a>
@@ -127,7 +123,7 @@
             </tr>
             <tr>
               <td>C0004</td>
-              <td>4</td>
+              <td>類別4</td>
               <td>
                 <a class="admin-btn" href="service-type-edit.html">編輯</a>
                 <a class="admin-btn" href="#">刪除</a>
@@ -135,12 +131,6 @@
             </tr>
           </tbody>
         </table>
-        <div class="admin-pagination">
-          <button class="admin-pagination__btn-prev is-disable">上一頁</button>
-          <span class="admin-pagination__current">1</span>
-          <span class="admin-pagination__page">/ 22頁</span>
-          <button class="admin-pagination__btn-next">下一頁</button>
-        </div>
       </div>
     </div>
   </div>
