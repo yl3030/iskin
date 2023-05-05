@@ -35,7 +35,7 @@
             </div>
           </li>
           <li>
-            <a class="side-bar__btn is-active" href="office-list.html">診間管理</a>
+            <a class="side-bar__btn" href="office-list.html">診間管理</a>
           </li>
           <li>
             <a class="side-bar__btn side-bar__btn--sub" href="#">器材管理</a>
@@ -51,7 +51,7 @@
             <a class="side-bar__btn" href="account-list.html">帳號管理</a>
           </li>
           <li>
-            <a class="side-bar__btn side-bar__btn--sub" href="#">其它管理</a>
+            <a class="side-bar__btn side-bar__btn--sub is-active" href="#">其它管理</a>
             <div class="side-bar__sub-nav">
               <a href="">診所時間</a>
               <a href="other-announce.html">佈告管理</a>
@@ -77,8 +77,8 @@
     </div>
     <div class="admin-main">
       <div class="admin-header">
-        <a class="admin-header__btn-back" href="office-list.html">返回</a>
-        <h2>診間與休息區管理</h2>
+        <a class="admin-header__btn-back" href="other-message.html">返回</a>
+        <h2>簡訊管理</h2>
         <div class="admin-header__control">
           <div class="admin-header__account">
             <img class="admin-header__account-avatar" class="" src="https://picsum.photos/id/1005/120/120" alt="">
@@ -88,57 +88,21 @@
         </div>
       </div>
       <div class="office-detail">
-        <div class="office-detail__basic-info">
-          <div class="office-detail__basic-info-inner">
-            <div class="office-detail__col">
-              <h3>基本資料</h3>
-              <div class="office-detail__form">
-                <div class="office-detail__row">
-                  <label for="name">名稱</label>
-                  <input type="text" id="name" value="">
-                </div>
-                <div class="office-detail__row">
-                  <label for="sn">編號</label>
-                  <input type="text" id="sn">
-                </div>
-                <div class="office-detail__row">
-                  <label for="place">位置</label>
-                  <input type="tel" id="place">
-                </div>
-                <div class="office-detail__row">
-                  <label for="status">狀態</label>
-                  <div class="office-detail__select-wrap">
-                    <select name="type" id="status">
-                      <option value="0">狀態</option>
-                      <option value="1">狀態1</option>
-                      <option value="2">狀態2</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
+          <div>
+            <div class="other-announce service-type-add__add">
+              <h3>標題</h3>
+              <input type="text">
             </div>
-            <div class="office-detail__col">
-              <h3></h3>
-              <div class="office-detail__row">
-                <label for="picture">照片</label>
-                <div class="office-detail__avatar">
-                  <div class="office-detail__picture-wrap">
-                    <img src="" alt="">
-                  </div>
-                  <input type="file">
-                </div>
-              </div>
-              <div class="office-detail__row">
-                <label for="memo">說明</label>
-                <textarea name="memo" id="memo" cols="30" rows="10"></textarea>
-              </div>
+            <div class="other-announce service-type-add__add">
+              <h3>內容</h3>
+              <textarea class="other-announce__content"></textarea>
             </div>
           </div>
           <button class="admin-btn-lg">儲存</button>
         </div>
       </div>
     </div>
-  </div>
+  
   <script src="../js/all.js"></script>
   <script>
     $(function(){

@@ -8,6 +8,7 @@
 </head>
 <body class="scroll">
   <div class="admin-wrap">
+    <a class="btn-new" href="client-new.html"></a>
     <div class="side-bar">
       <div class="side-bar__logo">
         <img src="../images/admin-logo.jpg" alt="">
@@ -24,7 +25,7 @@
             </div>
           </li>
           <li>
-            <a class="side-bar__btn side-bar__btn--sub" href="#">服務管理</a>
+            <a class="side-bar__btn side-bar__btn--sub is-active" href="#">服務管理</a>
             <div class="side-bar__sub-nav">
               <a href="service-type-list.html">類別管理</a>
               <a href="service-course-list.html">療程管理</a>
@@ -35,7 +36,7 @@
             </div>
           </li>
           <li>
-            <a class="side-bar__btn is-active" href="office-list.html">診間管理</a>
+            <a class="side-bar__btn" href="office-list.html">診間管理</a>
           </li>
           <li>
             <a class="side-bar__btn side-bar__btn--sub" href="#">器材管理</a>
@@ -77,8 +78,7 @@
     </div>
     <div class="admin-main">
       <div class="admin-header">
-        <a class="admin-header__btn-back" href="office-list.html">返回</a>
-        <h2>診間與休息區管理</h2>
+        <h2>服務管理：流程</h2>
         <div class="admin-header__control">
           <div class="admin-header__account">
             <img class="admin-header__account-avatar" class="" src="https://picsum.photos/id/1005/120/120" alt="">
@@ -87,64 +87,88 @@
           </div>
         </div>
       </div>
-      <div class="office-detail">
-        <div class="office-detail__basic-info">
-          <div class="office-detail__basic-info-inner">
-            <div class="office-detail__col">
-              <h3>基本資料</h3>
-              <div class="office-detail__form">
-                <div class="office-detail__row">
-                  <label for="name">名稱</label>
-                  <input type="text" id="name" value="">
-                </div>
-                <div class="office-detail__row">
-                  <label for="sn">編號</label>
-                  <input type="text" id="sn">
-                </div>
-                <div class="office-detail__row">
-                  <label for="place">位置</label>
-                  <input type="tel" id="place">
-                </div>
-                <div class="office-detail__row">
-                  <label for="status">狀態</label>
-                  <div class="office-detail__select-wrap">
-                    <select name="type" id="status">
-                      <option value="0">狀態</option>
-                      <option value="1">狀態1</option>
-                      <option value="2">狀態2</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="office-detail__col">
-              <h3></h3>
-              <div class="office-detail__row">
-                <label for="picture">照片</label>
-                <div class="office-detail__avatar">
-                  <div class="office-detail__picture-wrap">
-                    <img src="" alt="">
-                  </div>
-                  <input type="file">
-                </div>
-              </div>
-              <div class="office-detail__row">
-                <label for="memo">說明</label>
-                <textarea name="memo" id="memo" cols="30" rows="10"></textarea>
-              </div>
-            </div>
-          </div>
-          <button class="admin-btn-lg">儲存</button>
+      <div class="client-list">
+        <div class="site-search site-search--admin">
+          <input type="text">
+          <button>搜尋</button>
+        </div>
+        <table class="admin-table sortable">
+          <thead>
+            <tr>
+              <th>編號</th>
+              <th class="text-left">群組</th>
+              <th class="text-left">療程</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td class="text-left">手術</td>
+              <td class="text-left">預設療程</td>
+              <td>
+                <a class="admin-btn" href="service-flow.html">編輯</a>
+                <a class="admin-btn admin-btn-delete" href="#">刪除</a>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td class="text-left">皮膚科健保</td>
+              <td class="text-left">皮秒-淡斑緊膚</td>
+              <td>
+                <a class="admin-btn" href="service-flow.html">編輯</a>
+                <a class="admin-btn" href="#">刪除</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="admin-pagination">
+          <button class="admin-pagination__btn-prev is-disable">上一頁</button>
+          <span class="admin-pagination__current">1</span>
+          <span class="admin-pagination__page">/ 22頁</span>
+          <button class="admin-pagination__btn-next">下一頁</button>
         </div>
       </div>
     </div>
   </div>
+  <!--是否確認刪除帳號?-->
+  <div class="admin-confirm-ui" id="confirm-delete">
+    <div class="admin-confirm-ui__overlay">
+      <div class="admin-confirm-ui__inner">
+        <div class="admin-confirm-ui__icon">
+          <img src="../images/icon-exclamation.svg" alt="">
+        </div>
+        <div class="admin-confirm-ui__right">
+          <div class="admin-confirm-ui__content">
+            <h2>是否確認刪除帳號？</h2>
+            <p>文著況眼我點跑地們影者法心文分史單車美什論樂是車應留民車不經定似任車地不。</p>
+          </div>
+          <button class="admin-confirm-ui__btn-cancel">取消</button>
+          <button class="admin-confirm-ui__btn-delete">確認</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--是否確認刪除帳號?-->
   <script src="../js/all.js"></script>
   <script>
     $(function(){
       $('.side-bar__btn--sub').on('click', function(e){
         e.preventDefault()
         $(this).next().toggleClass('is-active')
+      })
+
+      $('.admin-btn-delete').on('click', function(){
+        $('#confirm-delete').addClass('is-active')
+      })
+
+      $('.admin-confirm-ui__btn-cancel').on('click', function(){
+        $('#confirm-delete').removeClass('is-active')
+      })
+
+      $('.admin-confirm-ui__btn-delete').on('click', function(){
+        alert('刪除動作')
+        $('#confirm-delete').removeClass('is-active')
       })
     })
   </script>
